@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+    text-align:none;
+}
+
+body {
+    background-color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.activation-wrapper {
+    width: 100%;
+    max-width: 500px;
+}
+
+.activation-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.icon-header {
+    margin-bottom: 24px;
+}
+
+.circle-check {
+    background-color: #d1fae5;
+    color: #059669;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #111827;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+p {
+    color: #4b5563;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.btn-activate {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.btn-activate:hover {
+    background-color: #1d4ed8;
+}
+
+.expiry-text {
+    font-size: 13px;
+    color: #9ca3af;
+    margin-top: 30px;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #e5e7eb;
+    margin: 20px 0;
+}
+
+@media (max-width: 480px) {
+    .activation-card {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+}

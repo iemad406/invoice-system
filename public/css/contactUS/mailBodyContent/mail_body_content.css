@@ -1,0 +1,394 @@
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { -o-table-baseline: 0pt; -o-table-baseline: 0pt; border-collapse: collapse;  border-spacing: 0;}
+    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+
+    :root {
+      --black:      #0b0b0b;
+      --deep:       #111111;
+      --card:       #161616;
+      --gold:       #c9a96e;
+      --gold-light: #e0c99a;
+      --gold-dim:   #7a5f38;
+      --white:      #f5f0e8;
+      --muted:      #9a8878;
+      --border:     #2a2318;
+    }
+
+    body {
+      background: #0e0c0a;
+      font-family: 'Jost', Georgia, serif;
+      color: var(--white);
+      padding: 40px 16px 60px;
+    }
+
+    .email-wrapper {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .pre-header {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 20px;
+    }
+
+    .email-header {
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-bottom: none;
+      padding: 32px 40px 28px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .email-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 40px; right: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-mark {
+      width: 38px; height: 38px;
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.45rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      color: var(--white);
+    }
+
+    .logo-text span {
+      color: var(--gold);
+    }
+
+    .header-tag {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      border: 1px solid var(--border);
+      padding: 5px 12px;
+      border-radius: 1px;
+    }
+
+    .hero-banner {
+      background: var(--black);
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      padding: 56px 40px 52px;
+      text-align: center;
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent 5%, var(--gold-dim) 30%, var(--gold) 50%, var(--gold-dim) 70%, transparent 95%);
+      opacity: 0.6;
+    }
+
+    .hero-ornament {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .ornament-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-dim));
+      max-width: 90px;
+    }
+    .ornament-line.right {
+      background: linear-gradient(90deg, var(--gold-dim), transparent);
+    }
+
+    .ornament-diamond {
+      color: var(--gold);
+      font-size: 1rem;
+      line-height: 1;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 6vw, 2.9rem);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-sub {
+      font-size: 0.82rem;
+      font-weight: 300;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    .body-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: none;
+      padding: 44px 40px 36px;
+    }
+
+    .greeting {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--white);
+      margin-bottom: 20px;
+    }
+
+    .body-text {
+      font-size: 0.88rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: #c0b0a0;
+      margin-bottom: 16px;
+    }
+
+    .inquiry-block {
+      border-left: 2px solid var(--gold-dim);
+      background: #0f0d0b;
+      padding: 20px 24px;
+      margin: 28px 0;
+      border-radius: 0 2px 2px 0;
+    }
+
+    .inquiry-block-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-dim);
+      margin-bottom: 12px;
+    }
+
+    .inquiry-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 0.84rem;
+    }
+
+    .inquiry-row:last-child { margin-bottom: 0; }
+
+    .inquiry-key {
+      color: var(--muted);
+      font-weight: 300;
+      min-width: 100px;
+      flex-shrink: 0;
+    }
+
+    .inquiry-val {
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, var(--border), transparent);
+      margin: 30px 0;
+    }
+
+    .cta-wrapper {
+      text-align: center;
+      margin: 34px 0 28px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-family: 'Jost', sans-serif;
+      font-size: 0.74rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      padding: 15px 44px;
+      border-radius: 1px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button::before {
+      content: '✦';
+      margin-right: 10px;
+      font-size: 0.6rem;
+      vertical-align: middle;
+      opacity: 0.7;
+    }
+
+    .cta-button::after {
+      content: '✦';
+      margin-left: 10px;
+      font-size: 0.6rem;
+      vertical-align: middle;
+      opacity: 0.7;
+    }
+
+    .cta-note {
+      font-size: 0.73rem;
+      font-weight: 300;
+      color: var(--muted);
+      margin-top: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .signature {
+      margin-top: 8px;
+    }
+
+    .signature-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--gold-light);
+      margin-bottom: 2px;
+    }
+
+    .signature-title {
+      font-size: 0.73rem;
+      font-weight: 300;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+
+    .email-footer {
+      background: #0b0907;
+      border: 1px solid var(--border);
+      border-top: none;
+      padding: 28px 40px;
+      position: relative;
+    }
+
+    .email-footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 40px; right: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
+      opacity: 0.5;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: var(--gold-dim);
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+    }
+
+    .footer-address {
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: #5a4a38;
+      line-height: 1.7;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      text-align: right;
+    }
+
+    .footer-links a {
+      font-size: 0.72rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: #5a4a38;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover { color: var(--gold-dim); }
+
+    .footer-bottom {
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid #1a1410;
+      text-align: center;
+      font-size: 0.68rem;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      color: #3a2e22;
+    }
+
+    
+    @media (max-width: 640px) {
+      body { padding: 20px 10px 40px; }
+
+      .email-header { padding: 24px 22px 22px; flex-wrap: wrap; gap: 14px; }
+      .header-tag { font-size: 0.62rem; padding: 4px 10px; }
+
+      .hero-banner { padding: 40px 22px 36px; }
+      .hero-headline { font-size: 1.8rem; }
+
+      .body-card { padding: 32px 22px 28px; }
+
+      .inquiry-row { flex-direction: column; gap: 2px; }
+      .inquiry-key { min-width: unset; }
+
+      .footer-inner { flex-direction: column; }
+      .footer-links { text-align: left; }
+      .email-footer { padding: 24px 22px; }
+
+      .cta-button { padding: 14px 28px; font-size: 0.7rem; }
+    }
+
+    @media (max-width: 400px) {
+      .logo-text { font-size: 1.2rem; }
+      .hero-headline { font-size: 1.55rem; }
+      .body-card { padding: 26px 16px 22px; }
+      .inquiry-block { padding: 16px 18px; }
+    }
